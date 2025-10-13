@@ -20,16 +20,28 @@
                     <fieldset>
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required />
+
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" />
+
                         <select name="curso" required="required">
                             <option value="">Escolha um curso</option>
-                            <option value="Engenharia">Engenharia de computação</option>
+                            <option value="engenharia_comp">Engenharia de computação</option>
                             <option value="Análise">Análise e desenvolvimento de sistemas</option> 
-                            <ootion value="ciencia">Ciência da Computação</ootion>
-                            <option value="Engenhariad">Engenharia de Software</option> 
+                            <option value="ciencia">Ciência da Computação</option>
+                            <option value="engenharia_soft">Engenharia de Software</option> 
                             <option value="Sistemas">Sistemas de informação</option>  
                         </select>
+
+                        <label for="password">Senha:</label>
+                        <input type="password" id="senha" name="senha" minlength="6" required />
+
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" name="idade" min="18" max="99">
+
+                        <label for="nascimento">Data de aniversário:</label>
+                        <input type="date" id="nascimento" name="nascimento">
+                        
                         <button type="submit">Confirmar</button>
                     </fieldset>
                 </form>
