@@ -14,7 +14,26 @@
         </header>
 
         <main class="conteiner">
-            <section class="card"></section>
+            <section class="card">
+                <h2>Cadastro</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required />
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" />
+                        <select name="curso" required="required">
+                            <option value="">Escolha um curso</option>
+                            <option value="Engenharia">Engenharia de computação</option>
+                            <option value="Análise">Análise e desenvolvimento de sistemas</option> 
+                            <ootion value="ciencia">Ciência da Computação</ootion>
+                            <option value="Engenhariad">Engenharia de Software</option> 
+                            <option value="Sistemas">Sistemas de informação</option>  
+                        </select>
+                        <button type="submit">Confirmar</button>
+                    </fieldset>
+                </form>
+            </section>
         </main>
     </body>
 </html>
