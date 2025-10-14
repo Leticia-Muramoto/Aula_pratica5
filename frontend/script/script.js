@@ -54,3 +54,26 @@ selectEstado.addEventListener("change", async function () {
 
 // Inicialmente carregar os estados
 window.addEventListener("DOMContentLoaded", carregarEstados);
+
+
+// Efeio blur no campo de email
+const inputEmail = document.getElementById("email");
+const msgEmail = document.getElementById("mensagemEmail");
+
+inputEmail.addEventListener("blur", function() {
+    const email = inputEmail.value.trim(); // Remove espaços em branco
+    // Expressão regular simples para validar email
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+        msgEmail.textContent = "O e-mail é obrigatório.";
+        msgEmail.style.color = "red";
+    } else if (!regexEmail.test(email)) {
+        msgEmail.textContent = "Por favor, insira um e-mail válido.";
+        msgEmail.style.color = "red";
+    } else {
+        msgEmail.textContent = "E-mail válido.";
+        msgEmail.style.color = "green";
+    }
+});
+
