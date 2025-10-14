@@ -17,6 +17,8 @@ background: var(--cor-fundo);
 line-height: 1.5;
 }
 
+/* TOPO */
+
 .topbar {
 padding: 24px 16px;
 text-align: center;
@@ -34,3 +36,11 @@ border-bottom: 1px solid var(--cor-borda);
     opacity: 0.85; 
     color: white;
 }    
+
+/* Foco na seleção: (contorno azul ao selecionar uma caixa)*/
+input:focus {
+    border-color: blue;
+
+    outline: none; /*Sem Contorno*/
+
+}
