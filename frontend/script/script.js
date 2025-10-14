@@ -60,18 +60,19 @@ window.addEventListener("DOMContentLoaded", carregarEstados);
 const inputEmail = document.getElementById("email");
 const msgEmail = document.getElementById("mensagemEmail");
 
+// Evento de perda de foco (blur)
 inputEmail.addEventListener("blur", function() {
     const email = inputEmail.value.trim(); // Remove espaços em branco
     // Expressão regular simples para validar email
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (email === "") {
+    if (email === "") { // Campo vazio
         msgEmail.textContent = "O e-mail é obrigatório.";
         msgEmail.style.color = "red";
-    } else if (!regexEmail.test(email)) {
+    } else if (!regexEmail.test(email)) { // E-mail inválido
         msgEmail.textContent = "Por favor, insira um e-mail válido.";
         msgEmail.style.color = "red";
-    } else {
+    } else { // E-mail válido
         msgEmail.textContent = "E-mail válido.";
         msgEmail.style.color = "green";
     }

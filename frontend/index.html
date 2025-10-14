@@ -18,14 +18,15 @@
                 <h2>Cadastro</h2>
                 <form action="#" method="post">
                     <fieldset>
+                        <!--Nome-->
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required maxlength="50"/>
+                        
+                        <!--Estado / Cidade-->
                         <label for="estado">Estado:</label>
-  
                         <select id="estado">
                             <option value="">-- Selecione o estado --</option>
                         </select>
-
                         <label for="cidade">Cidade:</label>
                         <select id="cidade" disabled>
                             <option value="">-- Selecione o estado primeiro --</option>
@@ -33,17 +34,20 @@
   
   
 
-
+                        <!--Email-->
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" />
                         <div id = "mensagemEmail" class="error-message" style="color: red;"></div>
-
+                        <!--Senha-->
                         <label for="password">Senha:</label>
                         <input type="password" id="senha" name="senha" minlength="6" required />
-
+                        
+                        <!--Idade-->
                         <label for="idade">Idade</label>
                         <input type="number" id="idade" name="idade" min="18" max="99">
 
+                        <!--Curso-->
+                        <label for="curso">Curso:</label>
                         <select name="curso" required="required">
                                 <option value="">Escolha um curso</option>
                                 <option value="engenharia_comp">Engenharia de computação</option>
