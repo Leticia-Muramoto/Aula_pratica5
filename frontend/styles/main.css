@@ -20,8 +20,17 @@ line-height: 1.5;
 .topbar {
 padding: 24px 16px;
 text-align: center;
-background: #63c1ea;
+background: #0678a9;
 border-bottom: 1px solid var(--cor-borda);
 }
-.sub { margin: 8px 0 0; opacity: 0.85; color: white;
+#titulo { 
+    margin: 0; 
+    font-size: 1.8rem; 
+    color: white;
+}
+.sub { 
+    text-align: start; 
+    margin: 8px 0 0; 
+    opacity: 0.85; 
+    color: white;
 }    
