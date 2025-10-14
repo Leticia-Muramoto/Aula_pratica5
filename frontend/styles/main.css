@@ -66,8 +66,16 @@ form fieldset {
     padding: 10px;
     margin: 0 0 16px;
 }
-legend { font-weight: 700; padding: 0 6px; }
-label { display: block; margin: 10px 0 6px; }
+legend { 
+    font-weight: 700; 
+    padding: 0 6px; 
+}
+
+label { 
+    display: block; 
+    margin: 10px 0 6px; 
+}
+
 input, select, textarea {
     width: 100%;
     padding: 10px 10px;
@@ -76,6 +84,36 @@ input, select, textarea {
     background: #fff;
     font: inherit;
 }
+
+/* Termo de uso */
+.label-termo {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px 0;
+}
+
+.label-termo input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+
+
+/* botões */
+.acoes { display: flex; gap: 12px; margin-top: 10px; }
+button {
+cursor: pointer;
+border: none;
+padding: 10px 18px;
+border-radius: 8px;
+font-weight: 700;
+background: var(--cor-primaria);
+color: #fff;
+}
+button:hover { filter: brightness(0.95); }
+button.secundario { background: #eef2f7; color: #1f2a37; }
+
+
+
 /* rodapé */
 .rodape {
     text-align: center;
