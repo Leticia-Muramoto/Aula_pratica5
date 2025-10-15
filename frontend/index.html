@@ -20,8 +20,14 @@
                     <fieldset>
                         <!--Nome-->
                         <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required minlength="3" maxlength="50"/>
-                        
+                        <input type="text" id="nome" name="nome" required minlength="3" maxlength="50" />
+
+                            <!-- Espelho: mostra o que usuário digitou -->
+                            <div id="espelhoNome" class="espelho-nome"></div>
+
+                            <!-- Contador de caracteres -->
+                            <div id="contadorNome" class="contador-nome">0 / 50</div>
+
                         <!--Estado / Cidade-->
                         <label for="estado">Estado:</label>
                         <select id="estado">

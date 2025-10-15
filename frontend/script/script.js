@@ -55,60 +55,85 @@ selectEstado.addEventListener("change", async function () {
 // Inicialmente carregar os estados
 window.addEventListener("DOMContentLoaded", carregarEstados);
 
+// NOME:
+  const inputNome = document.getElementById("nome");
+  const espelhoNome = document.getElementById("espelhoNome");
+  const contadorNome = document.getElementById("contadorNome");
+  const maxChars = 50; // Máximo de caracteres permitidos
+  const minChars = 3;  // Mínimo de caracteres para validação
 
-// Efeio blur no campo de email
-const inputEmail = document.getElementById("email");
-const msgEmail = document.getElementById("mensagemEmail");
+  // Evento de input para atualizar o espelho e o contador
+  inputNome.addEventListener("input", function() {
+      const nome = inputNome.value;
+      espelhoNome.textContent = nome; // Atualiza o espelho com o valor digitado
+      const currentLength = nome.length;
+      contadorNome.textContent = `${currentLength} / ${maxChars}`; // Atualiza o contador
 
-// Evento de perda de foco (blur)
-inputEmail.addEventListener("blur", function() {
-    const email = inputEmail.value.trim(); // Remove espaços em branco
-    // Expressão regular simples para validar email
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // Validação de comprimento
+      if (currentLength > maxChars) {
+          contadorNome.style.color = "red"; // Excede o máximo
+      } else if (currentLength < minChars) {
+          contadorNome.style.color = "orange"; // Abaixo do mínimo
+      } else {
+          contadorNome.style.color = "green"; // Dentro do intervalo aceitável
+      }
+  });
 
-    if (email === "") { // Campo vazio
-        msgEmail.textContent = "O e-mail é obrigatório.";
-        msgEmail.style.color = "red";
-    } else if (!regexEmail.test(email)) { // E-mail inválido
-        msgEmail.textContent = "Por favor, insira um e-mail válido.";
-        msgEmail.style.color = "red";
-    } else { // E-mail válido
-        msgEmail.textContent = "E-mail válido.";
-        msgEmail.style.color = "green";
-    }
-});
+// EMAIL:
+
+  // Efeio blur no campo de email
+  const inputEmail = document.getElementById("email");
+  const msgEmail = document.getElementById("mensagemEmail");
+
+  // Evento de perda de foco (blur)
+  inputEmail.addEventListener("blur", function() {
+      const email = inputEmail.value.trim(); // Remove espaços em branco
+      // Expressão regular simples para validar email
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (email === "") { // Campo vazio
+          msgEmail.textContent = "O e-mail é obrigatório.";
+          msgEmail.style.color = "red";
+      } else if (!regexEmail.test(email)) { // E-mail inválido
+          msgEmail.textContent = "Por favor, insira um e-mail válido.";
+          msgEmail.style.color = "red";
+      } else { // E-mail válido
+          msgEmail.textContent = "E-mail válido.";
+          msgEmail.style.color = "green";
+      }
+  });
 
 //Aparecer o botão enviar quando o formulário estiver completo
-const form = document.getElementById("formulario");
-const btnEnviar = document.getElementById("btnEnviar");
+  const form = document.getElementById("formulario");
+  const btnEnviar = document.getElementById("btnEnviar");
 
-function validarFormulario() {
-  const nome = document.getElementById("nome").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const estado = document.getElementById("estado").value;
-  const cidade = document.getElementById("cidade").value;
-  const curso = document.getElementById("curso").value;
-  const termo = document.getElementById("termo").checked;
+  function validarFormulario() {
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const estado = document.getElementById("estado").value;
+    const cidade = document.getElementById("cidade").value;
+    const curso = document.getElementById("curso").value;
+    const termo = document.getElementById("termo").checked;
 
-  if (
-    nome !== "" &&
-    email !== "" &&
-    estado !== "" &&
-    cidade !== "" &&
-    curso !== "" &&
-    termo === true
-  ) {
-    btnEnviar.classList.remove("hide");
-  } else {
-    btnEnviar.classList.add("hide");
+    if (
+      nome !== "" &&
+      email !== "" &&
+      estado !== "" &&
+      cidade !== "" &&
+      curso !== "" &&
+      termo === true
+    ) {
+      btnEnviar.classList.remove("hide");
+    } else {
+      btnEnviar.classList.add("hide");
+    }
   }
-}
 
-// Inicialmente adicionar a classe hide
-window.addEventListener("DOMContentLoaded", () => {
-  btnEnviar.classList.add("hide");
-});
+  // Inicialmente adicionar a classe hide
+  window.addEventListener("DOMContentLoaded", () => {
+    btnEnviar.classList.add("hide");
+  });
 
-// Adicionar listeners para validar conforme usuário digita / muda
-form.addEventListener("input", validarFormulario);
-form.addEventListener("change", validarFormulario);
+  // Adicionar listeners para validar conforme usuário digita / muda
+  form.addEventListener("input", validarFormulario);
+  form.addEventListener("change", validarFormulario);

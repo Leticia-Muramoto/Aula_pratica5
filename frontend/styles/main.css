@@ -84,6 +84,25 @@ input, select, textarea {
     background: #fff;
     font: inherit;
 }
+/* Estilo do espelho do nome */
+.espelho-nome {
+  margin-top: 4px;
+  font-style: italic;
+  color: #333;
+}
+
+/* Estilo do contador */
+.contador-nome {
+  margin-top: 2px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Se o campo nome ultrapassar limite, tornar vermelho */
+input.nome-erro {
+  border-color: red;
+  background-color: #ffe6e6; /* opcional para dar fundo leve vermelho */
+}
 
 /* Termo de uso */
 .label-termo {
