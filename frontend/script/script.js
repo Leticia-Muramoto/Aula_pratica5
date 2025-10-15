@@ -77,4 +77,3 @@ inputEmail.addEventListener("blur", function() {
         msgEmail.style.color = "green";
     }
 });
-
