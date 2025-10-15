@@ -15,14 +15,44 @@
 
         <main class="conteiner">
             <section class="card">
-            <h2 class="destaque">Criar conta</h2>
+            <h2 class="destaque">Cadastro</h2>
             <form action="#" method="post">
             <fieldset>
                 <label for="nome">Nome:</label>
-                <input id="nome" type="text" aria-describedby="ajuda-nome">
+                <input id="nome" type="text" name="nome" required maxlength="50"aria-describedby="ajuda-nome">
                 <small id="ajuda-nome">Digite seu nome. Máx. 50 caracteres.</small>
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">-- Selecione o estado --</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="mg">Minas Gerais</option>
+                </select>
             </fieldset>
+            <label for="cidade">Cidade:</label>
+            <select id="cidade" disabled>
+                <option value="">-- Selecione o estado primeiro --</option>
+            </select>
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" name="email" placeholder="exemplo@gmail.com" aria-describedby="ajuda-email">
+            <label for="password">Senha:</label>
+            <input type="password" id="senha" name="senha" minlength="6" required aria-describedby="ajuda-senha">
+            <small id="ajuda-senha">A senha deve ter no mínimo 6 caracteres.</small>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="18" max="99" required aria-describedby="ajuda-idade">
+            <select name="curso" required="required">
+                <option value="">Escolha um curso</option>
+                <option value="engenharia_comp">Engenharia de computação</option>
+                <option value="sistemas_info">Sistemas de informação</option>
+                <option value="ciencia_comp">Ciência da computação</option> 
+                <option value="analise">Análise e desenvolvimento de sistemas</option>
+                <option value="engenharia_soft">Engenharia de software</option>
+            </select>
+            <button type="submit">Enviar</button>
+            </fieldset>
+            </form>
             </section>
         </main>
+        <script src="../frontend/script/script.js"></script>
     </body>
 </html>

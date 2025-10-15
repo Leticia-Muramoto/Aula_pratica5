@@ -1,0 +1,36 @@
+{box-sizing: border-box;}
+:root{
+--cor-primaria: #14532d;
+--cor-escuro: #0b2239;
+--cor-fundo: #f5f7fb;
+--cor-borda: #000000;
+--cor-erro: #b42318;
+}
+
+/* TIPOGRAFIA GLOBAL */
+html, body {
+margin: 0;
+padding: 0;
+font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+color: var(--cor-escuro);
+background: var(--cor-fundo);
+line-height: 1.5;
+}
+
+.topbar {
+padding: 24px 16px;
+text-align: center;
+background: #0678a9;
+border-bottom: 1px solid var(--cor-borda);
+}
+#titulo { 
+    margin: 0; 
+    font-size: 1.8rem; 
+    color: white;
+}
+.sub { 
+    text-align: start; 
+    margin: 8px 0 0; 
+    opacity: 0.85; 
+    color: white;
+}   
