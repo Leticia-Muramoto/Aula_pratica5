@@ -78,3 +78,37 @@ inputEmail.addEventListener("blur", function() {
     }
 });
 
+//Aparecer o botão enviar quando o formulário estiver completo
+const form = document.getElementById("formulario");
+const btnEnviar = document.getElementById("btnEnviar");
+
+function validarFormulario() {
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const estado = document.getElementById("estado").value;
+  const cidade = document.getElementById("cidade").value;
+  const curso = document.getElementById("curso").value;
+  const termo = document.getElementById("termo").checked;
+
+  if (
+    nome !== "" &&
+    email !== "" &&
+    estado !== "" &&
+    cidade !== "" &&
+    curso !== "" &&
+    termo === true
+  ) {
+    btnEnviar.classList.remove("hide");
+  } else {
+    btnEnviar.classList.add("hide");
+  }
+}
+
+// Inicialmente adicionar a classe hide
+window.addEventListener("DOMContentLoaded", () => {
+  btnEnviar.classList.add("hide");
+});
+
+// Adicionar listeners para validar conforme usuário digita / muda
+form.addEventListener("input", validarFormulario);
+form.addEventListener("change", validarFormulario);

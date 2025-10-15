@@ -16,7 +16,7 @@
         <main class="conteiner">
             <section class="card">
                 <h2 class = "destaque" >Cadastro</h2>
-                <form action="#" method="post">
+                <form action="#" method="post" id = "formulario">
                     <fieldset>
                         <!--Nome-->
                         <label for="nome">Nome:</label>
@@ -28,7 +28,7 @@
                             <option value="">-- Selecione o estado --</option>
                         </select>
                         <label for="cidade">Cidade:</label>
-                        <select id="cidade" disabled>
+                        <select id="cidade" disabled required>
                             <option value="">-- Selecione o estado primeiro --</option>
                         </select>
 
@@ -42,11 +42,11 @@
                         
                         <!--Idade-->
                         <label for="idade">Idade</label>
-                        <input type="number" id="idade" name="idade" min="18" max="99">
+                        <input type="number" id="idade" name="idade" min="18" max="99" required>
 
                        <!--Curso-->
                         <label for="curso">Curso:</label>
-                        <select name="curso" required="required">
+                        <select id ="curso" name="curso"  required="required">
                                 <option value="">Escolha um curso</option>
                                 <option value="Análise">Análise e Desenvolvimento de Sistemas</option>
                                 <option value="cibersegurança">Cibersegurança</option>
@@ -55,6 +55,7 @@
                                 <option value="jogos_dig">Desenvolvimento de Jogos Digitais</option>
                                 <option value="engenharia_comp">Engenharia de Computação</option>
                                 <option value="engenharia_soft">Engenharia de Software</option> 
+<<<<<<< HEAD
                                 <optin value="segurança">Segurança da Informação</optin>
                                 <option value="Sistemas">Sistemas de Informação</option>  
                         </select>
@@ -67,6 +68,26 @@
                         
                         <!--Botão--> 
                         <button type="submit">Confirmar</button>
+=======
+                                <option value="segurança">Segurança da Informação</option>
+                                <option value="Sistemas">Sistemas de Informação</option>  
+                        </select>
+
+                        <label class="label-termo">
+                            <input type="checkbox" id="termo" name="termo" required>
+                            Aceito os termos de uso.
+                        </label>
+
+
+
+
+
+                        <!--Botões-->
+                        <div class = "acoes">
+                            <button type="submit" id = "btnEnviar" >Confirmar</button>
+                        </div>
+
+>>>>>>> main
                     </fieldset>
                 </form>
             </section>
