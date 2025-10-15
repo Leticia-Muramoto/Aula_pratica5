@@ -20,7 +20,7 @@
                     <fieldset>
                         <!--Nome-->
                         <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required minlength="3" maxlength="50" />
+                        <input type="text" id="nome" name="nome" required minlength="3"/>
 
                             <!-- Espelho: mostra o que usuário digitou -->
                             <div id="espelhoNome" class="espelho-nome"></div>
@@ -29,14 +29,14 @@
                             <div id="contadorNome" class="contador-nome">0 / 50</div>
 
                         <!--Estado / Cidade-->
-                        <label for="estado">Estado:</label>
-                        <select id="estado">
-                            <option value="">-- Selecione o estado --</option>
-                        </select>
-                        <label for="cidade">Cidade:</label>
-                        <select id="cidade" disabled required>
-                            <option value="">-- Selecione o estado primeiro --</option>
-                        </select>
+                            <label for="estado">Estado:</label>
+                            <select id="estado">
+                                <option value="">-- Selecione o estado --</option>
+                            </select>
+                            <label for="cidade">Cidade:</label>
+                            <select id="cidade" disabled required>
+                                <option value="">-- Selecione o estado primeiro --</option>
+                            </select>
   
   
 
@@ -78,7 +78,7 @@
 
                         <!--Botões-->
                         <div class = "acoes">
-                            <button type="submit" id = "btnEnviar" >Confirmar</button>
+                            <button type="submit" id = "btnEnviar">Confirmar</button>
                         </div>
 
                     </fieldset>

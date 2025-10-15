@@ -56,6 +56,7 @@ selectEstado.addEventListener("change", async function () {
 window.addEventListener("DOMContentLoaded", carregarEstados);
 
 // NOME:
+  // Espelho e contador de caracteres
   const inputNome = document.getElementById("nome");
   const espelhoNome = document.getElementById("espelhoNome");
   const contadorNome = document.getElementById("contadorNome");
@@ -108,7 +109,7 @@ window.addEventListener("DOMContentLoaded", carregarEstados);
   const btnEnviar = document.getElementById("btnEnviar");
 
   function validarFormulario() {
-    const nome = document.getElementById("nome").value.trim();
+    const nomeB = document.getElementById("nome").value.trim();
     const email = document.getElementById("email").value.trim();
     const estado = document.getElementById("estado").value;
     const cidade = document.getElementById("cidade").value;
@@ -116,7 +117,9 @@ window.addEventListener("DOMContentLoaded", carregarEstados);
     const termo = document.getElementById("termo").checked;
 
     if (
-      nome !== "" &&
+      nomeB !== "" &&
+      nomeB.length >= 3 &&
+      nomeB.length <= 50 &&
       email !== "" &&
       estado !== "" &&
       cidade !== "" &&
