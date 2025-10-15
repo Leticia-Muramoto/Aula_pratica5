@@ -98,6 +98,27 @@ input, select, textarea {
   color: #666;
 }
 
+/* Estilo base do indicador de força */
+.forca-senha {
+  margin-top: 4px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Classes para diferentes forças */
+.forca-fraca {
+  color: red;
+}
+
+.forca-media {
+  color: orange;
+}
+
+.forca-forte {
+  color: green;
+}
+
+
 /* Se o campo nome ultrapassar limite, tornar vermelho */
 input.nome-erro {
   border-color: red;

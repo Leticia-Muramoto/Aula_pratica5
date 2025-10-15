@@ -44,10 +44,13 @@
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" />
                         <div id = "mensagemEmail" class="error-message" style="color: red;"></div>
+                        
                         <!--Senha-->
                         <label for="password">Senha:</label>
                         <input type="password" id="senha" name="senha" minlength="6" required />
-                        
+                            <!-- Indicador de força da senha -->
+                            <div id="forcaSenha" class="forca-senha">Força: </div>
+
                         <!--Idade-->
                         <label for="idade">Idade</label>
                         <input type="number" id="idade" name="idade" min="18" max="99" required>

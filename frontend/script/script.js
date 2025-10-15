@@ -80,6 +80,53 @@ window.addEventListener("DOMContentLoaded", carregarEstados);
       }
   });
 
+  // SENHA:
+  const inputSenha = document.getElementById("senha");
+  const indicadorForca = document.getElementById("forcaSenha");
+
+  // Função para avaliar a força da senha
+  function avaliarForcaSenha(senha) {
+      let forca = 0;
+      if (senha.length >= 6) forca++;
+      if (/[A-Z]/.test(senha)) forca++;
+      if (/[a-z]/.test(senha)) forca++;
+      if (/[0-9]/.test(senha)) forca++;
+      if (/[\W]/.test(senha)) forca++; // Caracteres especiais
+      return forca;
+  }
+  // Evento de input para avaliar a força da senha
+  inputSenha.addEventListener("input", function() {
+      const senha = inputSenha.value;
+      const forca = avaliarForcaSenha(senha);
+      let textoForca = "Força: ";
+      let cor = "red";
+      switch (forca) {
+          case 0:
+          case 1:
+              textoForca += "Muito Fraca";
+              cor = "red";
+              break;
+          case 2:
+              textoForca += "Fraca";
+              cor = "orange";
+              break;
+          case 3:
+              textoForca += "Média";
+              cor = "yellow";
+              break;
+          case 4:
+              textoForca += "Forte";
+              cor = "blue";
+              break;
+          case 5:
+              textoForca += "Muito Forte";
+              cor = "green";
+              break;
+      } 
+      indicadorForca.textContent = textoForca;
+      indicadorForca.style.color = cor;
+  });
+
 // EMAIL:
 
   // Efeio blur no campo de email
